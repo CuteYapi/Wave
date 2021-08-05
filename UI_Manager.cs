@@ -45,14 +45,14 @@ public class UI_Manager : MonoBehaviour
 
                 return;
             }
-            gameoverUI.SetActive(true);
-            gameoverScore.text = score.ToString();
         }
+        gameoverUI.SetActive(true);
+        gameoverScore.text = score.ToString();
     }
 
     public void GetLife()
     {
-        for (int i = lifeStack.Length; i >= 0; i--)
+        for (int i = lifeStack.Length - 1; i >= 0; i--)
         {
             if(lifeStack[i] != 5)
             {
